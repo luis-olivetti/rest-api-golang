@@ -23,8 +23,8 @@ func main() {
 	populatePeople()
 
 	router := mux.NewRouter()
-	router.HandleFunc("/pessoa", getPeople).Methods("GET")
+	router.HandleFunc("/people", getPeople).Methods("GET")
 
-	log.Println("Executando servidor...")
+	log.Println("Server running...")
 	log.Fatal(http.ListenAndServe(":3000", router))
 }
